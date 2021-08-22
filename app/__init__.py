@@ -12,7 +12,8 @@ app = FastAPI()
 
 origins = [
     "http://localhost:3000",
-    "localhost:3000"
+    "localhost:3000",
+    "https://face-verification.netlify.app/"
 ]
 
 app.add_middleware(

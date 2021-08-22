@@ -29,7 +29,7 @@ class App extends React.Component {
     const formData = new FormData();
     formData.append("file1", this.state.img1, this.state.img1.name);
     formData.append("file2", this.state.img2, this.state.img2.name);
-    axios.post('/api/verify', formData).then(res => {
+    axios.post('https://face-verification-ivan.herokuapp.com/api/verify', formData).then(res => {
       console.debug(res.data);
       this.setState({result: res.data})
     }).catch(err => {
