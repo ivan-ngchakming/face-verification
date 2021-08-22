@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 from fastapi import FastAPI, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 
 from .arcface import face_app
 from .arcface.utils import cosine_similarity
@@ -52,3 +53,5 @@ async def verify(file1: UploadFile = File(...), file2: UploadFile = File(...)):
     return {
         'score': float(score),
     }
+
+app.mount("/", StaticFiles(directory='./build', html=True), name="static")
