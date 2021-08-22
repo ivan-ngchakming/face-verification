@@ -1,6 +1,5 @@
 venv
 node_modules
 **/__pycache__
+*.onnx
 build
-# Local Netlify folder
-.netlify
