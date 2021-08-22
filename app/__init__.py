@@ -27,10 +27,6 @@ app.add_middleware(
 
 face_app.init_models()
 
-@app.get('/')
-def index():
-    return "Index"
-
 
 @app.get('/api/ping')
 def ping():
